@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="538 个雅思阅读考点词、20 篇双语阅读与自动批改练习。">
+  <title>雅思考点词阅读练习</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <button class="brand" type="button" data-action="home" aria-label="返回首页">
+        <span class="brand-mark">阅</span>
+        <span class="brand-copy">
+          <strong>词桥 <span>READING LAB</span></strong>
+          <small>IELTS VOCABULARY PRACTICE</small>
+        </span>
+      </button>
+      <nav class="topnav" aria-label="主导航">
+        <button class="nav-link is-active" type="button" data-action="home">学习路径</button>
+        <button class="nav-link" type="button" data-action="review">词库复习</button>
+      </nav>
+      <div class="top-progress" aria-label="学习进度">
+        <span class="top-progress-label">进度</span>
+        <span class="top-progress-track"><i id="top-progress-fill"></i></span>
+        <strong id="top-progress-count">0 / 20</strong>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <div class="loading-state">
+        <span class="spinner" aria-hidden="true"></span>
+        <p>正在准备阅读练习…</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>为词汇而读，也为理解而读。</span>
+      <span>学习记录仅保存在当前浏览器</span>
+    </footer>
+  </div>
+
+  <dialog id="word-dialog" class="word-dialog">
+    <form method="dialog">
+      <button class="dialog-close" aria-label="关闭">×</button>
+      <div id="word-dialog-content"></div>
+    </form>
+  </dialog>
+</body>
+</html>
